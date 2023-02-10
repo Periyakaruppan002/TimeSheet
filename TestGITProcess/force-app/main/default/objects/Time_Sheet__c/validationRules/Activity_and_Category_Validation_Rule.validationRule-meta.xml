@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_and_Category_Validation_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND(NOT(ISBLANK(TEXT( Activity__c))) , NOT(ISBLANK(TEXT(Absence_Category__c)))),AND(ISBLANK(TEXT( Activity__c)) , ISBLANK(TEXT(Absence_Category__c))) )</errorConditionFormula>
+    <errorMessage>Both Activity and Category cannot be filled, only one of them can be selected.</errorMessage>
+</ValidationRule>

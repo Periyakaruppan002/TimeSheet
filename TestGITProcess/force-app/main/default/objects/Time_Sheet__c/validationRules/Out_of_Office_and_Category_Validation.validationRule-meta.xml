@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Out_of_Office_and_Category_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( CONTAINS( Project__r.Name , &quot;Out of Office&quot;) , NOT(ISBLANK(TEXT(Activity__c))))</errorConditionFormula>
+    <errorMessage>When Project is Out of Office Category must be selected.</errorMessage>
+</ValidationRule>
